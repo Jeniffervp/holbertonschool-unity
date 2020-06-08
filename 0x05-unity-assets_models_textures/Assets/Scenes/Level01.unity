@@ -691,28 +691,15 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412615837}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &425022472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2793823771013131321, guid: 2f76e36bba352464eb562537d04c4447,
-    type: 3}
-  m_PrefabInstance: {fileID: 2793823771434136614}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &425022473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425022472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c3f4f36f8a86f549b41b50d42d4a18a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 425022474}
 --- !u!143 &425022474 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 5281009918391398646, guid: 2f76e36bba352464eb562537d04c4447,
+    type: 3}
+  m_PrefabInstance: {fileID: 2793823771434136614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &425022478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2793823771013131269, guid: 2f76e36bba352464eb562537d04c4447,
     type: 3}
   m_PrefabInstance: {fileID: 2793823771434136614}
   m_PrefabAsset: {fileID: 0}
@@ -727,6 +714,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -798,6 +786,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a8ae21bf1c9024a94235bca343f7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchPlayer: 1
+  playerTrans: {fileID: 425022478}
+  smooth: 1
 --- !u!1 &572034398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8510460985470622625, guid: 2f76e36bba352464eb562537d04c4447,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 425022474}
     m_RemovedComponents:
     - {fileID: 54601063544724878, guid: 2f76e36bba352464eb562537d04c4447, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f76e36bba352464eb562537d04c4447, type: 3}
