@@ -710,7 +710,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 425022474}
-  speed: 6
 --- !u!143 &425022474 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 5281009918391398646, guid: 2f76e36bba352464eb562537d04c4447,
@@ -792,13 +791,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.000935332, y: 0.68282217, z: 0.00087418576, w: 0.7305835}
-  m_LocalPosition: {x: -8.42, y: 4.17, z: -0.23}
+  m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
+  m_LocalPosition: {x: 0, y: 2.5, z: -6.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.147, y: 86.129005, z: 0}
+  m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
 --- !u!1 &572034398
 GameObject:
   m_ObjectHideFlags: 0

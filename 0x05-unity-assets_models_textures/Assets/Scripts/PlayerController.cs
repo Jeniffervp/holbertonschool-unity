@@ -3,18 +3,34 @@
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 6f;
-
-
-    public void FixedUpdate()
+    public float jumpForce = 2.7f;
+    public float speed = 12f;
+    public float gravity = -20f;
+    Transform playerPosition;
+    Vector3 velocity;
+    void Start()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direc = new Vector3(horizontal, 0f, vertical);
+        playerPosition = GetComponent<Transform>();
+    }
+    public void Update()
+    {
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
 
-        if (direc.magnitude >= 0.1f)
-        {
-            controller.Move(direc * speed * Time.deltaTime);
-        }
+        if (controller.isGrounded && velocity.y < 0)
+            velocity.y = -2f;
+        if (controller.isGrounded && Input.GetButtonDown("Jump"))
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+
+        Vector3 direction = (transform.right * moveHorizontal) + (transform.forward * moveVertical);
+
+        controller.Move(direction * speed * Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
+
+        if (playerPosition.position.y < -30f)
+            playerPosition.position = new Vector3(0, 50, 0);
     }
 }
