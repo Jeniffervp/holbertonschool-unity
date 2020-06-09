@@ -26,3 +26,9 @@ Project from Holberton School to learn the basic concepts of unity.
 | 13. What's left of the flag | Download this flag model. Place it in the Models directory. Add Flag to your scene and make it a child of the WinFlag GameObject. The pole of the flag should be positioned inside WinFlag‘s collider. Resize or reposition the collider if necessary. |
 | 14. (Sea)horse race | Download this flag texture. Place it in a new directory called Textures. -Import Settings: Texture Type: Default, Texture Shape: 2D, Wrap Mode: Repeat. Inside the Materials folder, create a new Material called Flag and apply it to the rectangular flag portion of the Flag model. Apply the existing Wood Material to the flagpost portion of the model. |
 | 15. Under development | -Scenes in Build: Level01. -Create three builds of Level01 in a directory called Builds: -Windows and Linux builds should be set to x86_64 architecture. -Build Folder Hierarchy: -Builds: -Linux: Platformer_Data, Platformer.x86_64. -Mac: Platformer.app. -Windows: Platformer_Data. Platformer.exe. UnityPlayer.dll. -Make sure to run your build and make sure it works! Test your build on all three platforms if possible, but at the very least test on your own computer. Create a .zip of each build: -Platformer_Mac.zip. -Platformer_Linux_x86_64.zip. -Platformer_Windows_x86_64.zip. -Upload the three .zip files to Google Drive or Dropbox. Add the links to the files below. |
+
+### Credits
+
+Skyboxes: [Farland Skies - Cloudy Crown](https://assetstore.unity.com/packages/2d/textures-materials/sky/farland-skies-cloudy-crown-60004)
+
+Models: [Kenney's Nature Pack Extended](https://kenney.nl/assets/nature-pack-extended)
