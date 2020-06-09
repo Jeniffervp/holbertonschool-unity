@@ -14,8 +14,8 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         Vector3 newPosition = playerTrans.position + camOffset;
-        transform.position = Vector3.Slerp(playerTrans.position, newPosition, smooth);
+        transform.position = Vector3.Slerp(transform.position, newPosition, smooth);
         if (watchPlayer)
-            playerTrans.LookAt(playerTrans);
+            transform.LookAt(playerTrans);
     }
 }

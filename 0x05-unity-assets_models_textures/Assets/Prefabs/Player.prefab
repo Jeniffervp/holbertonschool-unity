@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2793823771013131271}
   - component: {fileID: 2793823771013131270}
   - component: {fileID: 5281009918391398646}
-  - component: {fileID: 8510460985470622625}
+  - component: {fileID: 494904476326875099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -112,7 +112,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8510460985470622625
+--- !u!114 &494904476326875099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3f4f36f8a86f549b41b50d42d4a18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 5281009918391398646}
-  jumpForce: 2.7
+  controller: {fileID: 0}
+  jumpForce: 5
   speed: 12
   gravity: -20
