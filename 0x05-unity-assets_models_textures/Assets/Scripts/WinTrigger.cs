@@ -13,8 +13,8 @@ public class WinTrigger : MonoBehaviour
         if (other.name == "Player")
         {
             player.GetComponent<Timer>().enabled = false;
+            timeText.color = Color.green;
+                            timeText.fontSize = 80;
         }
-        timeText.color = Color.green;
-        timeText.fontSize = 80;
     }
 }
