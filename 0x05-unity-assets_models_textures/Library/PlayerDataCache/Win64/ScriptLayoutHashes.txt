@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/student_31/Documents/holberton/holbertonschool-unity/0x05-unity-assets_models_textures/Builds/Platformer.exe
+C:/Users/student_31/Documents/holberton/holbertonschool-unity/0x05-unity-assets_models_textures/Builds/Windows/Platformer.exe
 SceneListBegin?
 Assets/Scenes/Level01.unity
 SceneListEnd?
