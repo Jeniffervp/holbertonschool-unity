@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 public class CameraController : MonoBehaviour
 {
-    public bool watchPlayer = false;
-    public bool rotateAround = true;
+    public bool rotAround = true;
     private Vector3 camOffset;
     public Transform playerTrans;
     public float smooth = 1f;
-    public float rotationSpeed = 5f;
+    public float rotationSpeed = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (rotateAround)
+        if (rotAround)
         {
             Quaternion camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
 
@@ -27,7 +26,7 @@ public class CameraController : MonoBehaviour
         Vector3 newPosition = playerTrans.position + camOffset;
         transform.position = Vector3.Slerp(transform.position, newPosition, smooth);
 
-        if (watchPlayer || rotateAround)
+        if (rotAround)
             transform.LookAt(playerTrans);
     }
 }
