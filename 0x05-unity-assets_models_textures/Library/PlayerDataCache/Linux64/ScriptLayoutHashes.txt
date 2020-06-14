@@ -1,6 +1,6 @@
 Linux64
 PlayerPath?
-C:/Users/student_31/Documents/holberton/holbertonschool-unity/0x05-unity-assets_models_textures/Builds/Platformer.x86_64
+C:/Users/student_31/Documents/holberton/holbertonschool-unity/0x05-unity-assets_models_textures/Builds/Linux/Platformer.x86_64
 SceneListBegin?
 Assets/Scenes/Level01.unity
 SceneListEnd?
@@ -20,7 +20,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.G
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
-797b8fc805d75c80e16782572d17c037 Assembly-CSharp.dll:.CameraController
+de210fc977199c60104308eb5d66ea02 Assembly-CSharp.dll:.CameraController
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
