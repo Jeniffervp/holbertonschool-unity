@@ -8,10 +8,12 @@ public class PlayerController : MonoBehaviour
     public float gravity = -20f;
     Transform playerPosition;
     Vector3 velocity;
+
     void Start()
     {
         playerPosition = GetComponent<Transform>();
     }
+
     public void Update()
     {
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
         if (controller.isGrounded && velocity.y < 0)
             velocity.y = -2f;
+
         if (controller.isGrounded && Input.GetButtonDown("Jump"))
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
 
@@ -27,7 +30,6 @@ public class PlayerController : MonoBehaviour
         controller.Move(direction * speed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
-
         controller.Move(velocity * Time.deltaTime);
 
         if (playerPosition.position.y < -30f)
