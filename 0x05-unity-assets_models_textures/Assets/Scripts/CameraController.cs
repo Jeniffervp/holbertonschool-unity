@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
     public Transform playerTrans;
     public float smooth = 1f;
     public float rotationSpeed = 1f;
+    private Quaternion camTurnAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,10 @@ public class CameraController : MonoBehaviour
     {
         if (rotAround)
         {
-            Quaternion camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
-
+            if (Input.GetMouseButton(1))
+            {
+                camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
+            }
             camOffset = camTurnAngle * camOffset;
         }
 
