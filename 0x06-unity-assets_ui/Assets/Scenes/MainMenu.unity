@@ -335,7 +335,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 467684859}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609635916}
+        m_MethodName: LevelSelect
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &467684859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +393,7 @@ GameObject:
   - component: {fileID: 609635913}
   - component: {fileID: 609635915}
   - component: {fileID: 609635914}
+  - component: {fileID: 609635916}
   m_Layer: 5
   m_Name: MenuBG
   m_TagString: Untagged
@@ -443,6 +455,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609635912}
   m_CullTransparentMesh: 0
+--- !u!114 &609635916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609635912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ac316781b540943aa0040db8c144dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1153404776
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +727,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1593274810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609635916}
+        m_MethodName: LevelSelect
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1593274810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -886,7 +921,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1768986958}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609635916}
+        m_MethodName: LevelSelect
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1768986958
 MonoBehaviour:
   m_ObjectHideFlags: 0
