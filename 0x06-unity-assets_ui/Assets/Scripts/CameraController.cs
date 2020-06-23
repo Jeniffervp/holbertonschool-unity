@@ -1,35 +1,35 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 public class CameraController : MonoBehaviour
 {
-    public bool rotAround = true;
-    private Vector3 camOffset;
+    public bool isInverted = false;
     public Transform playerTrans;
-    public float smooth = 1f;
-    public float rotationSpeed = 1f;
-    private Quaternion camTurnAngle;
+    public float rotationSpeed = 100f;
+    public Toggle invertedMode;
+    float mousex;
+    float mousey;
+    Quaternion camAngle;
 
     // Start is called before the first frame update
     void Start()
     {
-        camOffset = transform.position - playerTrans.position;
+        if (invertedMode)
+            isInverted = true;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (rotAround)
-        {
-            if (Input.GetMouseButton(1))
-            {
-                camTurnAngle = Quaternion.Euler(Input.GetAxis("Mouse Y") * rotationSpeed, Input.GetAxis("Mouse X") * rotationSpeed, 0);
-            }
-            camOffset = camTurnAngle * camOffset;
-        }
+        mousex += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
 
-        Vector3 newPosition = playerTrans.position + camOffset;
-        transform.position = Vector3.Slerp(transform.position, newPosition, smooth);
+        mousey += Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime * (isInverted ? -1 : 1);
 
-        if (rotAround)
-            transform.LookAt(playerTrans);
+        Vector3 direct = new Vector3(0, 1f, -4f);
+
+        mousey = Mathf.Clamp(mousey, -20f, 20f);
+        camAngle = Quaternion.Euler(mousey, mousex, 0);
+        transform.position = playerTrans.position + camAngle *direct;
+        transform.LookAt(playerTrans);
     }
 }

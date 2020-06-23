@@ -7571,10 +7571,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a8ae21bf1c9024a94235bca343f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotAround: 1
+  isInverted: 0
   playerTrans: {fileID: 425022478}
-  smooth: 1
-  rotationSpeed: 1
+  rotationSpeed: 100
+  invertedMode: {fileID: 0}
 --- !u!1 &536095960
 GameObject:
   m_ObjectHideFlags: 0
