@@ -3,10 +3,9 @@ using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
-    public bool isInverted = false;
+    public bool isInverted;
     public Transform playerTrans;
     public float rotationSpeed = 100f;
-    public Toggle invertedMode;
     float mousex;
     float mousey;
     Quaternion camAngle;
@@ -14,8 +13,14 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (invertedMode)
+        if (PlayerPrefs.GetInt("invertedY") == 1)
+        {
             isInverted = true;
+        }
+        else
+        {
+            isInverted = false;
+        }
     }
 
     // Update is called once per frame

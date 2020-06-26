@@ -13584,6 +13584,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2221069018636273072, guid: eacfceaa9edb83c49a968823b675c65c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2221069019680846114, guid: eacfceaa9edb83c49a968823b675c65c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17426,7 +17431,6 @@ MonoBehaviour:
   isInverted: 0
   playerTrans: {fileID: 355147712}
   rotationSpeed: 100
-  invertedMode: {fileID: 0}
 --- !u!81 &1431108533
 AudioListener:
   m_ObjectHideFlags: 0
@@ -19529,6 +19533,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 355147714}
   timeText: {fileID: 412450664}
+  timerMenu: {fileID: 0}
+  menuWin: {fileID: 0}
+  finalText: {fileID: 0}
 --- !u!136 &1637915731
 CapsuleCollider:
   m_ObjectHideFlags: 0
