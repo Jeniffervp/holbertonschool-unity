@@ -453,7 +453,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2221069018976118035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7052560178543383528}
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2221069019337695947
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +570,7 @@ GameObject:
   - component: {fileID: 2221069019680846115}
   - component: {fileID: 2221069019680846112}
   - component: {fileID: 2221069019680846113}
+  - component: {fileID: 7052560178543383528}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -646,6 +658,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7052560178543383528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221069019680846126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0184b623cb7a91d40bdbbe8293191eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2221069019683725309
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,4 +861,15 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2221069019824112843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7052560178543383528}
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
