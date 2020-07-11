@@ -5622,6 +5622,18 @@ CharacterController:
     type: 3}
   m_PrefabInstance: {fileID: 2793823771434136614}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &425022475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 494904476326875099, guid: 2f76e36bba352464eb562537d04c4447,
+    type: 3}
+  m_PrefabInstance: {fileID: 2793823771434136614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425022472}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f4f36f8a86f549b41b50d42d4a18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &425022478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2793823771013131269, guid: 2f76e36bba352464eb562537d04c4447,
@@ -14253,6 +14265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TimerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4631927003000870976, guid: e0111a7aa92c33f4aad1a45a2204e553,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7619768277458257077, guid: e0111a7aa92c33f4aad1a45a2204e553,
         type: 3}
@@ -27596,6 +27613,7 @@ GameObject:
   - component: {fileID: 2064790251}
   - component: {fileID: 2064790250}
   - component: {fileID: 2064790249}
+  - component: {fileID: 2064790253}
   m_Layer: 0
   m_Name: CutsceneCamera
   m_TagString: Untagged
@@ -27686,6 +27704,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2064790253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064790248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bcb323d5f39e3043adb40198f36786b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 534669902}
+  timerCanvas: {fileID: 1365680147}
+  scriptPlayer: {fileID: 425022475}
 --- !u!1001 &2070816976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29256,7 +29289,7 @@ PrefabInstance:
     - target: {fileID: 494904476326875099, guid: 2f76e36bba352464eb562537d04c4447,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 494904476326875099, guid: 2f76e36bba352464eb562537d04c4447,
         type: 3}
