@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     Transform positionPlayer;
     Vector3 velocity;
 
+    // footsteps audios
+    public AudioSource footStepsAudios;
+    public AudioClip runGrassSteps;
+
 
     void Start()
     {
@@ -47,6 +51,15 @@ public class PlayerController : MonoBehaviour
         if (direct.magnitude >= 0.1f)
         {
             run = true;
+
+            // foot Steps
+            if (controller.isGrounded)
+            {
+                footStepsAudios.volume = Random.Range(0.8f, 1);
+                footStepsAudios.pitch = Random.Range(0.8f, 1.1f);
+                footStepsAudios.PlayOneShot(runGrassSteps);
+            }
+
             float angTarget = Mathf.Atan2(direct.x, direct.z) * Mathf.Rad2Deg + cameraMain.eulerAngles.y;
             transform.rotation = Quaternion.Euler(0f, angTarget, 0f);
             Vector3 moveDirect = Quaternion.Euler(0f, angTarget, 0f) * Vector3.forward;
