@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
@@ -16,6 +18,8 @@ public class PlayerController : MonoBehaviour
     // footsteps audios
     public AudioSource footStepsAudios;
     public AudioClip runGrassSteps;
+    public AudioSource landingChoke;
+    bool landingPlaySound;
 
 
     void Start()
@@ -24,7 +28,7 @@ public class PlayerController : MonoBehaviour
         cameraMain = Camera.main.transform;
     }
     public void Update()
-    {        
+    {
         if (controller.isGrounded && velocity.y < 0)
             velocity.y = -2f;
 
@@ -44,7 +48,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Running", true);
         else
             anim.SetBool("Running", false);
-            
+
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
         Vector3 direct = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
@@ -80,5 +84,23 @@ public class PlayerController : MonoBehaviour
                 positionPlayer.position = new Vector3(0, 70, 0);
             }
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        landingChoke.Stop();
+        if (other.tag == "Choke")
+        {
+            landingPlaySound = true;
+            if (!landingChoke.isPlaying && landingPlaySound == true)
+                StartCoroutine(LandingSound());
+        }
+    }
+    IEnumerator LandingSound()
+    {
+        landingPlaySound = false;
+        landingChoke.Play();
+        yield return new WaitForSeconds(0.02f);
+        landingPlaySound = true;
     }
 }

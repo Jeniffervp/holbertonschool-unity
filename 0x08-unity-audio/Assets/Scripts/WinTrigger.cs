@@ -10,6 +10,8 @@ public class WinTrigger : MonoBehaviour
     public GameObject timerMenu;
     public GameObject menuWin;
     public Text finalText;
+    public AudioSource victory;
+    public AudioSource cheeryMonday;
 
     // Update is called once per frame
     public void OnTriggerEnter(Collider other)
@@ -25,5 +27,7 @@ public class WinTrigger : MonoBehaviour
         timerMenu.SetActive(false);
         menuWin.SetActive(true);
         finalText.text = timeText.text;
+        cheeryMonday.Stop();
+        victory.Play();
     }
 }
