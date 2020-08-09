@@ -63,3 +63,5 @@ crashlytics-build.properties
 0x06-unity-assets_ui/Temp/UnityLockfile
 0x09-unity_ar_business_card/Library/ArtifactDB
 0x09-unity_ar_business_card/Library/PackageCache/com.ptc.vuforia.engine@9.3.3/Vuforia/Plugins/iOS/Vuforia.framework/Vuforia
+0x09-unity_ar_business_card/Builds/iOS/Frameworks/com.ptc.vuforia.engine/Vuforia/Plugins/iOS/Vuforia.framework/Vuforia
+0x09-unity_ar_business_card/Builds/iOS/Libraries/libiPhone-lib.a
